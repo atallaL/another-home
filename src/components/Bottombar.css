@@ -1,0 +1,29 @@
+.bottombarContainer {
+    z-index: 3;
+    height: 30px;
+    width: 100vw;
+    background-color: var(--textColor);
+    box-shadow: 5px 0 10px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottombarText {
+    font-size: 12px;
+    font-family: var(--paragraphFont);
+    color: var(--bgColor);
+}
+
+.bottombarText a {
+    text-decoration: none;
+    font-weight: 900;
+    font-family: var(--headerFont);
+    color: var(--bgColor);
+    transition: letter-spacing 0.5s ease;
+}
+
+.bottombarText a:hover {
+    text-decoration: underline;
+    letter-spacing: 1px;
+}

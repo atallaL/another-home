@@ -4,14 +4,15 @@ import './index.css';
 //pages
 import Home from './pages/home/Home';
 import Adopt from './pages/adopt/Adopt';
-import Rehome from './pages/rehome/Rehome'
-import About from './pages/about/About'
-import Contact from './pages/contact/Contact'
+import Rehome from './pages/rehome/Rehome';
+import About from './pages/about/About';
+import Contact from './pages/contact/Contact';
 
 import React, {useState, useEffect, useRef} from 'react';
 import {HashRouter as Router, Routes, Route, useLocation, useNavigate} from 'react-router-dom';
 
-import Topbar from './components/Topbar'
+import Topbar from './components/Topbar';
+import Bottombar from './components/Bottombar';
 
 function App() {
 
@@ -39,20 +40,24 @@ function App() {
           <div className="dogWalkAnimation" />
         </>
       }
-
-      <Topbar/>
-
-      {/* keyed component allows for reframing on page change */}
-      <div className="pageContainer" key={loc.pathname}>
-        <div className="App">
-          <Routes>
-            <Route path="/" element={<Home/>}/>
-            <Route path="/about" element={<About/>}/>
-            <Route path="/contact" element={<Contact/>}/>
-            <Route path="/adopt" element={<Adopt/>}/>
-            <Route path="/rehome" element={<Rehome/>}/>
-          </Routes>
+      
+      {/* to make bars stick to top and bottom */}
+      <div className="appWrap">
+        <Topbar/>
+        {/* keyed component allows for reframing on page change */}
+        <div className="pageContainer" key={loc.pathname}>
+          <div className="App">
+            <Routes>
+              <Route path="/" element={<Home/>}/>
+              <Route path="/about" element={<About/>}/>
+              <Route path="/contact" element={<Contact/>}/>
+              <Route path="/adopt" element={<Adopt/>}/>
+              <Route path="/rehome" element={<Rehome/>}/>
+            </Routes>
+          </div>
         </div>
+
+        <Bottombar/>
       </div>
     </>
   );

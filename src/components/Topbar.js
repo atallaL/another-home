@@ -27,14 +27,14 @@ const Topbar = () => {
 
             {/* hamburger */}
             <div className={`topbarHamburger ${hamburgerOpen ? 'opened' : ''}`} onClick={() => setHamburgerOpen(prev => !prev)}>
-              <i class="bi bi-list"/>
+              <i className="bi bi-list"/>
             </div>
 
             <div className={`topbarLinks ${hamburgerOpen ? 'opened' : ''}`}>
               <div className="topbarDropdown">
                 <div className="topbarLink">About Us
                   <div className="topbarArrow">
-                    <i class="bi bi-chevron-down" />
+                    <i className="bi bi-chevron-down" />
                   </div>
                 </div>
 
