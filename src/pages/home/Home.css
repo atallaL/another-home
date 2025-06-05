@@ -3,6 +3,8 @@
 }
 
 .heroImageContainer {
+    height: 95vh;
+    border-radius: 20px;
     width: 105%;
     overflow: hidden;
 }

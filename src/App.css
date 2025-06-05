@@ -34,7 +34,7 @@
   border-radius: 50%;
   z-index:10;
   background: var(--bgColor);
-  animation: shrinkCircle 0.6s cubic-bezier(0,.77,.35,1) 2s forwards;
+  animation: shrinkCircle 0.65s cubic-bezier(0,.77,.35,1) 2.7s forwards;
   transform: translate(-50%, -50%) scale(2);
 }
 
@@ -53,19 +53,29 @@
   left: 50%;
   width: 300px;
   height: 300px;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0.15);
   background-image: url('./assets/dog-walk-spritesheet.png');
   background-repeat: no-repeat;
-  animation: playSprite 0.9s steps(6) forwards;
+  opacity: 1;
+  animation: dogWalk 1s steps(6) forwards infinite, dogFadeOut 0.3s ease-out 2.3s forwards;
 }
 
-@keyframes playSprite {
+@keyframes dogWalk {
   0% {
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(0.15);
     background-position: 0 0;
   }
   100% {
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(0.15);
     background-position: -1800px 0;
+  }
+}
+
+@keyframes dogFadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }

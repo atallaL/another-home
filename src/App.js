@@ -25,7 +25,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoaded(true);
-    }, 2600);
+    }, 3500);
   });
 
 
@@ -35,9 +35,7 @@ function App() {
       {/* website loadup */}
       {!loaded && 
         <div className="startupScreen">
-          <div className="dogWalkContainer">
-            
-          </div>
+          <div className="dogWalkAnimation" />
         </div>
       }
 
