@@ -1,0 +1,12 @@
+.heroSection {
+    display: flex;
+}
+
+.heroImageContainer {
+    width: 105%;
+    overflow: hidden;
+}
+
+.heroImageContainer img {
+    width: 105%;
+}

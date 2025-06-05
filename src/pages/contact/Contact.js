@@ -1,14 +1,14 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-import './Adopt.css'
+import './Contact.css'
 
-function Adopt() {
+function Contact() {
     return (
         <div>
-            <h1>in progrdsadsadsaess</h1>
+            <h1>contact</h1>
         </div>
     );
 }
 
-export default Adopt;
+export default Contact;

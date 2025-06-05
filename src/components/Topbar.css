@@ -1,0 +1,149 @@
+.topbarContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    color: var(--accentColor);
+    box-shadow: 0 4px 10px var(--shadowColor);
+    font-family: 'Cairo', sans-serif;
+}
+
+.topbarElements {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.topbarLinks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.topbarLink {
+    all: unset;
+    display: inline-flex;
+    align-items: center;
+    margin: 0 20px;
+    cursor: pointer;      
+    transition: opacity 0.3s ease-out, transform 0.3s ease;  
+}
+
+.topbarLink:hover {
+    opacity: 0.75;
+    transform: scale(1.05);
+}
+
+.topbarArrow {
+    margin-left: 5px;
+    padding-top: 2px;
+    transform: rotate(180deg);
+    transform-origin: center;
+    transition: transform 0.5s ease;
+}
+
+.topbarLogoImage {
+    padding-top: 8px;
+    width: 140px;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.topbarLogoImage:hover {
+    transform: scale(0.97);
+}
+
+.topbarDropdown {
+    position: relative;
+    display: inline-flex; 
+    flex-direction: column;
+}
+
+
+.topbarDropdown::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 10px; 
+    width: 100%;
+}
+
+/* dropdown menu stuff */
+.topbarDropContent {
+    display:flex;
+    flex-direction: column;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 10;
+    position: absolute;
+    top: 120%;
+    left: 0;
+    padding: 10px 20px;
+    background-color: white;
+    box-shadow: 0 0px 15px var(--shadowColor);
+    width: 100px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.5s ease-out, transform 0.7s ease, visibility 0.3s ease-out;
+}
+
+.topbarDropLink {
+    all: unset;
+    cursor: pointer;
+    color: var(--textColor);
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.topbarDropdown:hover .topbarDropContent {
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.topbarDropdown:hover .topbarArrow {
+    transform: rotate(0);
+}
+
+.topbarDropdown:hover .topbarLink {
+    opacity: 0.75;
+    transform: scale(1.05);
+}
+
+
+.topbarDropLink:hover {
+    opacity: 1;
+}
+
+/* underline animation using ::after */
+
+.topbarLink::after {
+    content: '';
+    position: absolute;
+    bottom: 3px;
+    left: 0px;
+    width: 0;
+    height: 1px;
+    background-color: var(--accentColor);
+    transition: width 0.3s ease-out;
+}
+
+.topbarLink:hover::after {
+    width: 100%;
+}
+
+
