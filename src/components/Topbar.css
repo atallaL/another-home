@@ -38,12 +38,14 @@
     align-items: center;
     margin: 0 20px;
     cursor: pointer;      
+    transform: scale(1) translateY(0);
     transition: opacity 0.3s ease-out, transform 0.3s ease;  
+    will-change: transform;
 }
 
 .topbarLink:hover {
     opacity: 0.75;
-    transform: scale(1.05);
+    transform: scale(1.05) translateY(-1px);
 }
 
 .topbarArrow {
@@ -57,12 +59,14 @@
 .topbarLogoImage {
     padding-top: 8px;
     width: 140px;
-    transform: scale(1);
-    transition: transform 0.3s ease;
+    opacity: 1;
+    transform: scale(0.97);
+    transition: opacity 0.5s ease-out, transform 0.3s ease;
 }
 
 .topbarLogoImage:hover {
-    transform: scale(0.97);
+    opacity: 0.7;
+    transform: scale(1);
 }
 
 .topbarDropdown {
@@ -121,7 +125,7 @@
 
 .topbarDropdown:hover .topbarLink {
     opacity: 0.75;
-    transform: scale(1.05);
+    transform: scale(1.05) translateY(-1px);
 }
 
 
@@ -146,4 +150,83 @@
     width: 100%;
 }
 
+/* hamburger thingy for mobile */
 
+.topbarHamburger {
+    display:none;
+    flex-direction:column;
+    justify-content: center;
+    align-items: right;
+    cursor:pointer;
+}
+
+.topbarHamburger i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    opacity: 1;
+    border-radius:10px;
+    width:40px;
+    height:40px;
+    font-size: 25px;
+    color: var(--accentColor);
+    transform: scale(1);
+    transition: opacity 0.5s ease, color 0.3s ease, background-color 0.5s ease, transform 0.5s ease;
+    will-change: transform;
+}
+
+.topbarHamburger i:hover {
+    background-color: var(--accentColor);
+    color: var(--bgColor);
+    opacity: 0.5;
+    transform: scale(1.05);
+}
+
+.topbarHamburger.opened i {
+    background-color: var(--accentColor);
+    color: var(--bgColor);
+}
+
+.topbarHamburger.opened i:hover {
+    opacity: 0.8;
+}
+
+/* responsive */
+
+@media only screen and (max-width: 768px) {
+    .topbarHamburger {
+        display: flex;
+    }
+
+    .topbarLinks {
+        visibility: hidden;
+        pointer-events: none;
+        position: absolute;
+        top: 75px;
+        right:5px;;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        gap: 10px;
+        background-color: var(--bgColor);
+        box-shadow: 0 0px 15px var(--shadowColor);
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease-out, transform 0.7s ease, visibility 0.3s ease-out;
+        opacity: 0;
+    }
+
+    .topbarLinks.opened {
+        visibility: visible;
+        pointer-events: auto;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .topbarDropContent {
+        top: 0px;
+        left: -150px;
+    }
+
+
+}

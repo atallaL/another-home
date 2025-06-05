@@ -3,12 +3,88 @@
 }
 
 .heroImageContainer {
-    height: 95vh;
+    height: 90vh;
     border-radius: 20px;
-    width: 105%;
+    width: 100%;
     overflow: hidden;
+    background-image: url('../../assets/hero-dogbg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
 }
 
-.heroImageContainer img {
-    width: 105%;
+.heroContent {
+    position: absolute;
+    top: 35%;
+    left: 7%;
+    width:40%;
+}
+
+.heroContent h1 {
+    color: var(--bgColor);
+    font-size: 60px;
+    font-weight: 800;
+    margin-bottom: 0;
+    white-space:nowrap;
+}
+
+.heroContent p {
+    color: var(--bgColor);
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 5px;
+}
+
+.homeContent {
+    width: 100%;
+}
+
+/* responsive */
+@media only screen and (min-width: 1350px) {
+    .heroContent h1 {
+        font-size: 70px;
+    }
+
+    .heroContent p {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .heroImageContainer {
+        background-position: 60% center;
+        display: flex;
+        justify-content: center;
+        background-image: url('../../assets/hero-dogbg-mobile.jpg');
+    }
+
+    .heroContent {
+        position: relative;
+        top:38%;
+        left:0;
+        width:90%;
+        text-align:center;
+    }
+
+    .heroContent h1 {
+        font-size: 50px;
+    
+    }
+
+    .heroContent p {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+
+    .heroContent h1 {
+        font-size: 40px;
+    }
+
+    .heroContent p {
+        font-size: 18px;
+    }
 }

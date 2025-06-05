@@ -1,6 +1,6 @@
 .App {
   width: 100%;
-  height: 300vh;
+  height: 100%;
 }
 
 .pageContainer {
@@ -25,16 +25,17 @@
 }
 
 /* start screen animation */
+
 .startupScreen {
   position: fixed;
+  z-index:10;
   top:50%;
   left:50%;
   width:100vw;
   height:100vw;
   border-radius: 50%;
-  z-index:10;
   background: var(--bgColor);
-  animation: shrinkCircle 0.65s cubic-bezier(0,.77,.35,1) 2.7s forwards;
+  animation: shrinkCircle 0.65s cubic-bezier(0,.71,.42,1.03) 2.7s forwards;
   transform: translate(-50%, -50%) scale(2);
 }
 
@@ -49,24 +50,26 @@
 
 .dogWalkAnimation {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  z-index:10;
+  bottom: 2vh;
+  right: 3vw;
   width: 300px;
   height: 300px;
-  transform: translate(-50%, -50%) scale(0.15);
+  transform: scale(0.2);
+  transform-origin: bottom right;
   background-image: url('./assets/dog-walk-spritesheet.png');
   background-repeat: no-repeat;
   opacity: 1;
-  animation: dogWalk 1s steps(6) forwards infinite, dogFadeOut 0.3s ease-out 2.3s forwards;
+  animation: dogWalk 1s steps(6) forwards infinite, dogFadeOut 0.4s ease-out 2.2s forwards;
 }
 
 @keyframes dogWalk {
   0% {
-    transform: translate(-50%, -50%) scale(0.15);
+    transform: scale(0.2);
     background-position: 0 0;
   }
   100% {
-    transform: translate(-50%, -50%) scale(0.15);
+    transform: scale(0.2);
     background-position: -1800px 0;
   }
 }

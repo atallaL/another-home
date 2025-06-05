@@ -34,9 +34,10 @@ function App() {
     <>
       {/* website loadup */}
       {!loaded && 
-        <div className="startupScreen">
+        <>
+          <div className="startupScreen" />
           <div className="dogWalkAnimation" />
-        </div>
+        </>
       }
 
       <Topbar/>
