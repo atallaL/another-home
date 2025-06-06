@@ -1,0 +1,106 @@
+.aboutMain{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-image: url('../../assets/pawprint.png');
+    background-repeat: repeat;
+    background-size: 150px;
+}
+
+/* add gradient to bg */
+.aboutMain::before {
+    content:"";
+    position: absolute;
+    inset:0;
+    background: linear-gradient(to right, var(--bgColor), rgba(255, 255, 255, 0.25));
+    z-index: 1;
+}
+
+.aboutHeaderContainer {
+    z-index: 2;
+    border-radius:10px;
+    display: flex;
+    align-items:center;
+    height: 45vh;
+    padding-bottom: 30px;
+    background-image: url('../../assets/aboutheader.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 5px 5px var(--shadowColor);
+}
+
+.aboutHeader {
+    padding: 100px 7% 0;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.aboutHeader h1 {
+    color: var(--bgColor);
+    font-size: 45px;
+    font-weight: 800;
+    margin-bottom: 0;
+    white-space:nowrap;
+}
+
+.aboutHeader p {
+    color: var(--bgColor);
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 5px;
+}
+
+.aboutContent {
+    color: var(--textColor);
+    z-index:2;
+    padding: 50px 5% 50px;
+    margin-right: 40%;
+
+}
+
+.aboutContent a {
+    color: var(--accentColor);
+}
+
+.aboutContent a:hover {
+    opacity: 0.8;
+}
+
+.aboutHeader p {
+    margin-top: 0;
+}
+
+.aboutContent h2 {
+    margin-bottom:0;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .aboutMain {
+        justify-content: center;
+    }
+
+    .aboutHeader { 
+        text-align: center;
+        width: 80%;
+    }
+
+    .aboutHeader h1 {
+        font-size: 35px;
+    }
+
+    .aboutHeader p {
+        font-size: 14px;
+    }
+
+    .aboutContent h2 {
+        font-size: 20px;
+    }
+
+    .aboutContent p {
+        font-size: 14px;
+    }
+
+}

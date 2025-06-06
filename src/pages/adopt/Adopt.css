@@ -1,0 +1,47 @@
+.adoptMain{
+    display: flex;
+    position: relative;
+    margin: 150px 7% 0;
+}
+
+.adoptHeader {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.adoptHeader h1 {
+    color: var(--textColor);
+    font-size: 55px;
+    font-weight: 800;
+    margin-bottom: 0;
+    white-space:nowrap;
+}
+
+.adoptHeader p {
+    color: var(--textColor);
+    font-size: 22px;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .adoptMain {
+        justify-content: center;
+    }
+
+    .adoptHeader { 
+        text-align: center;
+        width: 80%;
+    }
+
+    .adoptHeader h1 {
+        font-size: 45px;
+    }
+
+    .adoptHeader p {
+        font-size: 18px;
+    }
+
+}
