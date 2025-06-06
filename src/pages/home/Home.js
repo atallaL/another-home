@@ -6,7 +6,7 @@ import dogImg from '../../assets/homecat.jpg';
 import catImg from '../../assets/homedog.jpeg';
 import tapeImg from '../../assets/tape.png';
 
-
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 function Home() {
 
@@ -58,14 +58,26 @@ function Home() {
             </div>
             <div className="mainBottom">
                 <div className="mainBottomHeader">
-
+                    <h2>Learn more about us</h2>
                 </div>
                 <div className="mainBottomSections">
                     <div className="mainBottomSection">
-
+                        <div className="botSecContent">
+                            <i class="bi bi-heart"></i>
+                            <p>Click here to learn more about our mission, rescue, and what we can do to help you!</p>
+                        </div>
+                        <div className="botSecLink">
+                            <Link to='/about'>About us →</Link>
+                        </div>
                     </div>
                     <div className="mainBottomSection">
-                        
+                        <div className="botSecContent">
+                            <i class="bi bi-telephone-inbound"></i>
+                            <p>We would love to chat! Contact us if you have any outstanding questions or concerns.</p>
+                        </div>
+                        <div className="botSecLink">
+                            <Link to='/contact'>Contact us →</Link>
+                        </div>
                     </div>
                 </div>
             </div>

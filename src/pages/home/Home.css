@@ -67,6 +67,7 @@
     flex-direction:column;
     justify-content: space-evenly;
     padding: 15vh 10vw 20vh 10vw;
+    box-shadow: 0 5px 5px var(--shadowColor);
 }
 
 .homeSectionContent button {
@@ -143,6 +144,65 @@
     margin: 0;
 }
 
+.mainBottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--textColor);
+    background-color: var(--complimentColor);
+    padding: 60px 50px 80px 50px;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.986) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.mainBottomHeader h2{
+    font-weight: 800;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.mainBottomSections {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.mainBottomSection {
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    padding: 0 5%;
+}
+
+.mainBottomSection i {
+    font-size: 40px;
+    margin: 0 30px;
+    color: var(--textColor);
+}
+
+.botSecContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.botSecLink {
+    align-self: flex-end;
+}
+
+.botSecLink a {
+    font-weight: 600;
+    color: var(--accentColor);
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.botSecLink a:hover {
+    opacity: 0.8;
+}
+
 /* responsive */
 @media only screen and (min-width: 1600px) {
     .heroContent h1 {
@@ -156,7 +216,6 @@
     .heroContent button {
         padding: 15px 20px;
         font-size: 18px;
-
     }
 }
 
@@ -203,6 +262,29 @@
     .homeSection:last-child {
         flex-direction: column;
     }
+
+    .botSecContent {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .botSecLink {
+        align-self: center;
+    }
+
+    .mainBottomHeader h2{
+        font-size: 24px;
+        margin-bottom: 45px;
+    }
+ 
+    .botSecContent p{
+        font-size: 15px;
+    }
+
+    .botSecLink a {
+        font-size: 15px;
+    }
+
 }
 
 @media only screen and (max-width: 576px) {
@@ -218,6 +300,21 @@
     .homeMain button {
         font-size: 14px;
         padding: 12px 16px;
+    }
+
+    .homeSectionContent p {
+        font-size: 14px;
+        white-space: normal;
+    }
+
+    .homeSectionContent h2 {
+        font-size: 26px;
+        margin: 0;
+    }
+
+    
+    .homeSectionContent button {
+        align-self: center;
     }
 }
 
