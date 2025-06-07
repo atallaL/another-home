@@ -7,6 +7,7 @@ import Adopt from './pages/adopt/Adopt';
 import Rehome from './pages/rehome/Rehome';
 import About from './pages/about/About';
 import Contact from './pages/contact/Contact';
+import AdoptAnimal from './pages/animal/AdoptAnimal';
 
 import React, {useState, useEffect, useRef} from 'react';
 import {HashRouter as Router, Routes, Route, useLocation, useNavigate} from 'react-router-dom';
@@ -53,6 +54,7 @@ function App() {
               <Route path="/contact" element={<Contact/>}/>
               <Route path="/adopt" element={<Adopt/>}/>
               <Route path="/rehome" element={<Rehome/>}/>
+              <Route path="/adopt/:id" element={<AdoptAnimal />} />
             </Routes>
           </div>
         </div>

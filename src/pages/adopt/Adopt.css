@@ -1,18 +1,19 @@
 .adoptMain{
     display: flex;
+    flex-direction: column;
     position: relative;
-    margin: 150px 7% 0;
 }
 
 .adoptHeader {
     display: flex;
     flex-direction: column;
     width: 60%;
+    margin: 130px 7% 80px;
 }
 
 .adoptHeader h1 {
     color: var(--textColor);
-    font-size: 55px;
+    font-size: 45px;
     font-weight: 800;
     margin-bottom: 0;
     white-space:nowrap;
@@ -20,28 +21,139 @@
 
 .adoptHeader p {
     color: var(--textColor);
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 400;
     margin-top: 5px;
 }
 
+.adoptContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 7%;
+}
+
+.adoptContentHeader {
+    margin-top: 80px;
+}   
+
+.adoptContentHeader h2{
+    font-weight: 800;
+    font-size: 25px;
+    color: var(--textColor);
+}
+
+.adoptContentContainer {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 0 -3px 3px var(--shadowColor);
+    background-color: var(--complimentColor);
+}
+
+.adoptGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    align-items: stretch; 
+    justify-items: center;
+    justify-content: space-between;
+    width:100%;
+    margin-bottom: 150px;
+}
+
+.adoptGridSection {
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    opacity:0.85;
+    transform-origin: center;
+    transform: scale(0.97);
+    transition: opacity 0.3s ease, transform 0.5s ease;
+    cursor: pointer;
+    will-change: transform;
+}
+
+.adoptGridSection:hover {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.adoptGridSection img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    box-shadow: 0 0 8px var(--shadowColor);
+    transition: box-shadow 0.5s ease;
+}
+
+.adoptGridSection:hover img {
+    box-shadow: 0 0 15px black;
+}
+
+
+.adoptGridInfo {
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    width:100%;
+    align-items: center;
+}
+
+.adoptGridInfo h3 {
+    margin:0;
+    color: var(--textColor);
+}
+
+.adoptGridInfo p {
+    margin: 0;
+    color: var(--textColor);
+}
+
 @media only screen and (max-width: 768px) {
 
-    .adoptMain {
-        justify-content: center;
-    }
-
     .adoptHeader { 
-        text-align: center;
         width: 80%;
     }
 
     .adoptHeader h1 {
-        font-size: 45px;
+        font-size: 35px;
     }
 
     .adoptHeader p {
-        font-size: 18px;
+        font-size: 14px;
     }
 
+    .adoptContentHeader h2 {
+        font-size: 20px;
+    }
+
+    .adoptGridSection {
+        max-width: 250px;
+        margin-bottom: 50px;
+    }
+
+    .adoptGridSection img {
+        height: 200px;
+    }
+
+    .adoptGridInfo h3 {
+        font-size: 16px;
+    }
+
+    .adoptGridInfo p {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .adoptGridSection {
+        max-width: 80vw;
+    }
+
+    .adoptGrid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
 }

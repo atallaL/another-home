@@ -1,0 +1,78 @@
+.animalMain{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 150px 7% 0;
+}
+
+.animalHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+}
+
+.animalHeaderImage img {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.animalHeaderImage {
+    margin-right: 5%;
+}
+
+.animalHeaderText h1 {
+    color: var(--textColor);
+    font-size: 45px;
+    font-weight: 800;
+    margin: 0;
+    white-space:nowrap;
+}
+
+.animalHeaderText p {
+    color: var(--textColor);
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+.animalBackLink {
+    margin-bottom: 80px;
+}
+
+.animalBackLink a {
+    font-weight: 600;
+    color: var(--accentColor);
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.animalBackLink a:hover {
+    opacity: 0.8;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .animalHeaderText h1 {
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .animalHeaderImage {
+        margin: 0;
+        align-self: center;
+    }
+
+    .animalHeaderImage img {
+        align-self: center;
+    }
+
+    .animalHeader {
+        flex-direction: column;
+    }
+
+    .animalHeaderText p {
+        font-size: 14px;
+    }
+
+}

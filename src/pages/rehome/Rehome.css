@@ -12,7 +12,7 @@
 
 .rehomeHeader h1 {
     color: var(--textColor);
-    font-size: 55px;
+    font-size: 45px;
     font-weight: 800;
     margin-bottom: 0;
     white-space:nowrap;
@@ -20,7 +20,7 @@
 
 .rehomeHeader p {
     color: var(--textColor);
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 400;
     margin-top: 5px;
 }
@@ -37,11 +37,11 @@
     }
 
     .rehomeHeader h1 {
-        font-size: 45px;
+        font-size: 35px;
     }
 
     .rehomeHeader p {
-        font-size: 18px;
+        font-size: 14px;
     }
 
 }
