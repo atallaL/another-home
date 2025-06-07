@@ -46,7 +46,7 @@
 .adoptContentContainer {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    box-shadow: 0 -3px 3px var(--shadowColor);
+    box-shadow: 0 -5px 10px var(--shadowColor);
     background-color: var(--complimentColor);
 }
 
@@ -87,6 +87,7 @@
     object-fit: cover;
     box-shadow: 0 0 8px var(--shadowColor);
     transition: box-shadow 0.5s ease;
+    border-radius: 5px;
 }
 
 .adoptGridSection:hover img {

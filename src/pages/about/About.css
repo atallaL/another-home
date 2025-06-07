@@ -55,7 +55,7 @@
 .aboutContent {
     color: var(--textColor);
     z-index:2;
-    padding: 50px 5% 50px;
+    padding: 50px 5% 80px;
     margin-right: 40%;
 
 }
@@ -103,4 +103,11 @@
         font-size: 14px;
     }
 
+}
+
+
+@media only screen and (max-width: 576px) {
+    .aboutContent {
+        margin-right: 15%;
+    }
 }

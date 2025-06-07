@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 
 import './Adopt.css'
 
@@ -11,6 +11,13 @@ import mittens from '../../assets/available-animals/mittens.jpg';
 import bartholomew from '../../assets/available-animals/bartholomew.jpg';
 
 function Adopt() {
+
+    const nav = useNavigate();
+
+    const handleAnimalPage = (id) => {
+        nav(`/adopt/${id}`);
+    };
+
     return (
         <div className="adoptMain">
             <div className="adoptHeader">
@@ -24,35 +31,35 @@ function Adopt() {
                         <h2>Available animals</h2>
                     </div>
                     <div className="adoptGrid">
-                        <div className="adoptGridSection">
+                        <div className="adoptGridSection" onClick={() => handleAnimalPage('barry')}>
                             <img src={barry}></img>
                             <div className="adoptGridInfo">
                                 <h3>Barry</h3>
                                 <p>3mo</p>
                             </div>
                         </div>
-                        <div className="adoptGridSection">
+                        <div className="adoptGridSection" onClick={() => handleAnimalPage('spot')}>
                             <img src={spot}></img>
                             <div className="adoptGridInfo">
                                 <h3>Spot</h3>
                                 <p>3y 8mo</p>
                             </div>
                         </div>
-                        <div className="adoptGridSection">
+                        <div className="adoptGridSection" onClick={() => handleAnimalPage('cindy')}>
                             <img src={cindy}></img>
                             <div className="adoptGridInfo">
                                 <h3>Cindy</h3>
                                 <p>7mo</p>
                             </div>
                         </div>
-                        <div className="adoptGridSection">
+                        <div className="adoptGridSection" onClick={() => handleAnimalPage('mittens')}>
                             <img src={mittens}></img>
                             <div className="adoptGridInfo">
                                 <h3>Mittens</h3>
                                 <p>3mo</p>
                             </div>
                         </div>
-                        <div className="adoptGridSection">
+                        <div className="adoptGridSection" onClick={() => handleAnimalPage('bartholomew')}>
                             <img src={bartholomew}></img>
                             <div className="adoptGridInfo">
                                 <h3>Bartholomew</h3>
