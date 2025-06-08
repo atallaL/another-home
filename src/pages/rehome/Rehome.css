@@ -1,13 +1,15 @@
 .rehomeMain{
     display: flex;
+    flex-direction: column;
     position: relative;
-    margin: 150px 7% 0;
+    color: var(--textColor);
 }
 
 .rehomeHeader {
+    margin: 130px 7% 50px;
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 80%;
 }
 
 .rehomeHeader h1 {
@@ -25,14 +27,97 @@
     margin-top: 5px;
 }
 
+.rehomeForms {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;    
+    white-space: nowrap;
+}
+
+.rehomeFormsContainer {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 0 -5px 10px var(--shadowColor);
+    background-color: var(--complimentColor);
+    background-image: radial-gradient(#fafaef33 30px, transparent 1px);
+    background-size: 100px 100px;
+    margin-top: 60px;
+}
+
+.rehomeFormsContent {
+    margin: 80px 7% 150px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.rehomeFormsContainer h2{
+    margin-top: 0;
+}
+
+.rehomeForm {
+    padding: 0 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
+}
+
+.rehomeMain label {
+    display: flex;
+    flex-direction: column;
+    color: var(--textColor);
+    font-size: 13px;
+    font-weight: 400;
+    margin-bottom: 3px;
+}
+
+.rehomeMain .rehomeFormElement {
+    max-width: 500px;
+}
+
+.rehomeMain input, .rehomeMain select{
+    padding: 5px 2px;
+    border: var(--textColor) solid 1px;
+    border-radius: 5px;
+    font-family: var(--paragraphFont);
+    width: 100%;
+}
+
+.rehomeMain input:focus-visible, .rehomeMain select:focus-visible, .rehomeMain input:focus, .rehomeMain select:focus {
+    outline: var(--textColor) solid 1px;
+}
+
+.rehomeMain h3 {
+    font-weight: 500;
+    margin: 0;
+}
+
+.rehomeMain button {
+    margin-top: 60px;
+    border:none;
+    max-width:100%;
+    border-radius: 5px;
+    background-color: var(--accentColor);
+    padding: 10px 15px;
+    color: var(--bgColor);
+    font-size: 13px;
+    font-weight: 700;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.432);;
+    cursor: pointer;
+    align-self: center;
+    transition: opacity 0.2s ease-out, transform 0.3s ease;
+}
+
+.rehomeMain button:hover {
+    opacity: 0.8;
+    transform: scale(0.95);
+}
+
 @media only screen and (max-width: 768px) {
 
-    .rehomeMain {
-        justify-content: center;
-    }
-
     .rehomeHeader { 
-        text-align: center;
         width: 80%;
     }
 
@@ -41,7 +126,20 @@
     }
 
     .rehomeHeader p {
-        font-size: 1px;
+        font-size: 14px;
+    }
+
+    .rehomeForms {
+        flex-direction: column;
+    }
+
+    .rehomeForm {
+        padding: 0;
+        margin-bottom: 60px;
+    }
+
+    .rehomeMain button{
+        margin-top: 0;
     }
 
 }

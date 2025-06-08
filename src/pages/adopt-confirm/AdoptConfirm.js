@@ -13,7 +13,7 @@ function AdoptConfirm() {
                 <p>To continue the process of adoption or to learn more about it, please <Link to="/contact">contact us here</Link>. We can give you more information on the animal you're interested in and set up an in-person meeting if you feel like this is the perfect companion for you!</p>
                 <div className="aConfirmHome">
                 <img src={logo} />
-                <p><Link to='/'>To home</Link></p>
+                <p><Link to='/'>Back home</Link></p>
                 </div>
             </div>
         </div>
