@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/another-home/static/css/main.ac213375.css",
+    "main.js": "/another-home/static/js/main.94e8bbb8.js",
+    "static/js/453.4bd60693.chunk.js": "/another-home/static/js/453.4bd60693.chunk.js",
+    "static/media/hero-dogbg.jpg": "/another-home/static/media/hero-dogbg.36896bdb4aaa58c9e454.jpg",
+    "static/media/hero-dogbg-mobile.jpg": "/another-home/static/media/hero-dogbg-mobile.b4d0071f534b0ae86424.jpg",
+    "static/media/aboutheader.png": "/another-home/static/media/aboutheader.701ca3a99cd4d01568d1.png",
+    "static/media/barry.jpg": "/another-home/static/media/barry.ef5e0fa6fcfc14879d39.jpg",
+    "static/media/spot.jpg": "/another-home/static/media/spot.514df1df3087adc8b4ad.jpg",
+    "static/media/bootstrap-icons.woff?": "/another-home/static/media/bootstrap-icons.1295669cd4e305c97f2c.woff",
+    "static/media/cindy.png": "/another-home/static/media/cindy.176b8f06294d50a6aa7a.png",
+    "static/media/bootstrap-icons.woff2?": "/another-home/static/media/bootstrap-icons.92ea18a81d737146ff04.woff2",
+    "static/media/bartholomew.jpg": "/another-home/static/media/bartholomew.0987afe27b1e2406cff5.jpg",
+    "static/media/mittens.jpg": "/another-home/static/media/mittens.927e41f4de1304108d0d.jpg",
+    "static/media/homecat.jpg": "/another-home/static/media/homecat.c89c3f51b27d97687123.jpg",
+    "static/media/homedog.jpeg": "/another-home/static/media/homedog.5f56579d892329c5edf8.jpeg",
+    "static/media/tape.png": "/another-home/static/media/tape.598fba5832fd1f7d7939.png",
+    "static/media/dog-walk-spritesheet.png": "/another-home/static/media/dog-walk-spritesheet.8a13a657bd4b53206b80.png",
+    "index.html": "/another-home/index.html",
+    "main.ac213375.css.map": "/another-home/static/css/main.ac213375.css.map",
+    "main.94e8bbb8.js.map": "/another-home/static/js/main.94e8bbb8.js.map",
+    "453.4bd60693.chunk.js.map": "/another-home/static/js/453.4bd60693.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ac213375.css",
+    "static/js/main.94e8bbb8.js"
+  ]
+}
