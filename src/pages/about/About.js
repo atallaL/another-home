@@ -13,8 +13,6 @@ function About() {
                 </div>
             </div>
 
-            <div className="aboutDivider"></div>
-
             <div className="aboutContent">
                 <h2>Another Home</h2>
                 <p>At Another Home, all animals are treated with love, respect, and care. Our goal is to provide a temporary shelter for displaced or abandoned animals while doing our best job in keeping them healthy and happy.</p>

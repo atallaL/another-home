@@ -1,16 +1,16 @@
-.rehomeMain{
+.rConfirmMain{
     display: flex;
     position: relative;
     margin: 150px 7% 0;
 }
 
-.rehomeHeader {
+.rConfirmHeader {
     display: flex;
     flex-direction: column;
     width: 60%;
 }
 
-.rehomeHeader h1 {
+.rConfirmHeader h1 {
     color: var(--textColor);
     font-size: 45px;
     font-weight: 800;
@@ -18,7 +18,7 @@
     white-space:nowrap;
 }
 
-.rehomeHeader p {
+.rConfirmHeader p {
     color: var(--textColor);
     font-size: 18px;
     font-weight: 400;
@@ -27,20 +27,20 @@
 
 @media only screen and (max-width: 768px) {
 
-    .rehomeMain {
+    .rConfirmMain {
         justify-content: center;
     }
 
-    .rehomeHeader { 
+    .rConfirmHeader { 
         text-align: center;
         width: 80%;
     }
 
-    .rehomeHeader h1 {
+    .rConfirmHeader h1 {
         font-size: 35px;
     }
 
-    .rehomeHeader p {
+    .rConfirmHeader p {
         font-size: 14px;
     }
 

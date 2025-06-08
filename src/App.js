@@ -8,6 +8,8 @@ import Rehome from './pages/rehome/Rehome';
 import About from './pages/about/About';
 import Contact from './pages/contact/Contact';
 import AdoptAnimal from './pages/animal/AdoptAnimal';
+import AdoptConfirm from './pages/adopt-confirm/AdoptConfirm';
+import RehomeConfirm from './pages/rehome-confirm/RehomeConfirm';
 
 import React, {useState, useEffect, useRef} from 'react';
 import {HashRouter as Router, Routes, Route, useLocation, useNavigate} from 'react-router-dom';
@@ -55,6 +57,8 @@ function App() {
               <Route path="/adopt" element={<Adopt/>}/>
               <Route path="/rehome" element={<Rehome/>}/>
               <Route path="/adopt/:id" element={<AdoptAnimal />} />
+              <Route path="/adopt/confirm" element={<AdoptConfirm />} />
+              <Route path="/rehome/confirm" element={<RehomeConfirm />} />
             </Routes>
           </div>
         </div>

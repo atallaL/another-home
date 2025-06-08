@@ -1,16 +1,18 @@
-.rehomeMain{
+.aConfirmMain{
+    text-align: center;
     display: flex;
+    align-items: center;
     position: relative;
     margin: 150px 7% 0;
 }
 
-.rehomeHeader {
-    display: flex;
-    flex-direction: column;
-    width: 60%;
+.aConfirmContent {
+    display:flex;
+    flex-direction:column;
+    margin: 0 20%;
 }
 
-.rehomeHeader h1 {
+.aConfirmMain h1 {
     color: var(--textColor);
     font-size: 45px;
     font-weight: 800;
@@ -18,30 +20,63 @@
     white-space:nowrap;
 }
 
-.rehomeHeader p {
+.aConfirmMain p {
     color: var(--textColor);
     font-size: 18px;
     font-weight: 400;
     margin-top: 5px;
 }
 
+.aConfirmMain a {
+    font-weight: 600;
+    color: var(--accentColor);
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.aConfirmMain a:hover {
+    opacity: 0.8;
+}
+
+.aConfirmHome {
+    margin-top: 40px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.aConfirmHome img {
+    width:50px;
+}
+
+.aConfirmHome p {
+    font-size: 14px;
+    margin: 0;
+}
+
+
 @media only screen and (max-width: 768px) {
 
-    .rehomeMain {
+    .aConfirmMain {
         justify-content: center;
     }
 
-    .rehomeHeader { 
-        text-align: center;
-        width: 80%;
-    }
 
-    .rehomeHeader h1 {
+    .aConfirmMain h1 {
         font-size: 35px;
     }
 
-    .rehomeHeader p {
-        font-size: 14px;
+    .aConfirmMain p {
+        font-size: 12px;
+    }
+
+    .aConfirmHome p {
+        font-size: 12px;
+    }
+
+    .aConfirmHome img {
+        width:40px;
     }
 
 }

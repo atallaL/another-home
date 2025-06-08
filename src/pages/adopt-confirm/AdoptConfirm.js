@@ -1,18 +1,23 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-import './Rehome.css'
+import './AdoptConfirm.css'
+import logo from '../../assets/redlogosymbol.png'
 
-function Rehome() {
+function AdoptConfirm() {
     return (
-        <div className="rehomeMain">
-            <div className="rehomeHeader">
-                <h1>Rehome</h1>
-                <p>We understand how difficult it can be to care for a pet. If you’re looking for a safe and loving place for your animal, we will help you every step of the way. </p>
-                <p>By filling in this form, you will know if this is the right move for you and your future, as well as the future of your pet.</p>
+        <div className="aConfirmMain">
+            <div className="aConfirmContent">
+                <h1>Thank you!</h1>
+                <p>Thanks for your interest in adopting one of our amazing animals!</p>
+                <p>To continue the process of adoption or to learn more about it, please <Link to="/contact">contact us here</Link>. We can give you more information on the animal you're interested in and set up an in-person meeting if you feel like this is the perfect companion for you!</p>
+                <div className="aConfirmHome">
+                <img src={logo} />
+                <p><Link to='/'>To home</Link></p>
+                </div>
             </div>
         </div>
     );
 }
 
-export default Rehome;
+export default AdoptConfirm;

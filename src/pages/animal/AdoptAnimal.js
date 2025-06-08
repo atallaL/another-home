@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link, useParams} from 'react-router-dom'
+import {Link, useParams, useNavigate} from 'react-router-dom'
 
 import './AdoptAnimal.css'
 
@@ -16,6 +16,7 @@ function AdoptAnimal() {
     //get name of animal (passed through url) and then information based on that 
     const {id} = useParams();
     const animalInfo = animalData[id];
+    const nav = useNavigate();
 
     return (
         <div className="animalMain">
@@ -30,7 +31,7 @@ function AdoptAnimal() {
                     <h1>{animalInfo.name}</h1>
                     <p>Meet {animalInfo.name}! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a sapien augue. Aenean purus ipsum, gravida ac massa nec, egestas lobortis odio. Integer vehicula rutrum tortor, sed tempus neque consectetur eget. Pellentesque lacinia arcu in purus lobortis posuere. Pellentesque non fermentum ante.</p>
                     <div className="animalAdoptButton">
-                        <button>Adopt</button>
+                        <button onClick={() => nav('/adopt/confirm')}>Adopt</button>
                     </div>
                 </div>
             </div>
